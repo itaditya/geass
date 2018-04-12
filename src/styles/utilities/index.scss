@@ -1,0 +1,49 @@
+.#{$utilities-prefix} {
+  @import 'layout';
+  @import 'sizing';
+  @import 'spacing';
+  @import 'colors';
+  @import 'misc';
+}
+
+@each $bp, $val in $breakpoints {
+  @media (min-width: $val) {
+    .#{$bp}\@#{$utilities-prefix} {
+      @import 'layout';
+      @import 'sizing';
+      @import 'spacing';
+      @import 'colors';
+      @import 'misc';
+    }
+  }
+
+  @media (min-width: $val) and (max-width: map-get($breakpoints-end, $bp)) {
+    .#{$bp}-only\@#{$utilities-prefix} {
+      @import 'layout';
+      @import 'sizing';
+      @import 'spacing';
+      @import 'colors';
+      @import 'misc';
+    }
+  }
+}
+
+@media (max-width: map-get($breakpoints, 'sm')) {
+  .xs-only\@#{$utilities-prefix} {
+    @import 'layout';
+    @import 'sizing';
+    @import 'spacing';
+    @import 'colors';
+    @import 'misc';
+  }
+}
+
+@media (min-width: map-get($breakpoints, 'xl')) {
+  .xl-only\@#{$utilities-prefix} {
+    @import 'layout';
+    @import 'sizing';
+    @import 'spacing';
+    @import 'colors';
+    @import 'misc';
+  }
+}

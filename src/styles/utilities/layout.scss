@@ -1,0 +1,29 @@
+// Layout Utility Classes
+
+&-center {
+  @include center();
+}
+
+&-d#{$value-prefix}flex {
+  display: flex;
+}
+
+$fd-list: (row, column, row-reverse, column-reverse);
+
+@each $item in $fd-list {
+  &-fd#{$value-prefix}#{$item} {
+    flex-direction: $item;
+  }
+}
+
+$alignment-map: (start: flex-start, center: center, between: space-between, around: space-around, evenly: space-evenly, end: flex-end);
+
+@each $prop, $val in $alignment-map {
+  &-jc#{$value-prefix}#{$prop} {
+    justify-content: $val;
+  }
+
+  &-ai#{$value-prefix}#{$prop} {
+    align-items: $val;
+  }
+}

@@ -1,0 +1,27 @@
+$utilities-prefix: u;
+$value-prefix: \:;
+
+
+$theme-colors: (
+  'black': #000,
+  'white': #fff,
+  'primary': #007bff,
+  'secondary': #6c757d,
+  'success': #28a745,
+  'danger': #dc3545,
+  'warning': #ffc107,
+  'default': #212529
+);
+
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+
+$breakpoints-end: (
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1200px
+);

@@ -1,0 +1,30 @@
+// Sizing Utility Classes
+
+@for $i from 1 through 4 {
+  $perc-v: 25 * $i;
+
+  &-h#{$value-prefix}#{$perc-v} {
+    height: $perc-v + %;
+  }
+
+  &-w#{$value-prefix}#{$perc-v} {
+    width: $perc-v + %;
+  }
+
+  &-mh#{$value-prefix}#{$perc-v} {
+    min-height: $perc-v + %;
+  }
+
+  &-mxh#{$value-prefix}#{$perc-v} {
+    max-height: $perc-v + %;
+  }
+
+
+  &-mw#{$value-prefix}#{$perc-v} {
+    min-width: $perc-v + %;
+  }
+
+  &-mxw#{$value-prefix}#{$perc-v} {
+    max-width: $perc-v + %;
+  }
+}

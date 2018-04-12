@@ -1,0 +1,10 @@
+// Color Utility Classes
+
+@each $prop, $val in $theme-colors {
+  &-text#{$value-prefix}#{$prop} {
+    color: $val;
+  }
+  &-bg#{$value-prefix}#{$prop} {
+    background: $val;
+  }
+}

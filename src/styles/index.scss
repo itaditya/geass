@@ -1,0 +1,14 @@
+@import 'variables/index';
+
+@function theme($key: 'default') {
+  @return map-get($theme-colors, $key);
+}
+
+@import 'mixins/index';
+@import 'utilities/index';
+
+body {
+    background: theme(white);
+    display: flex;
+    color: theme();
+}

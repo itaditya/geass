@@ -1,0 +1,24 @@
+// Spacing Utility Classes
+
+$padding-list: (5, 10, 20, 35);
+$selectors-map: (p: padding, pt: padding-top, pb: padding-bottom, pl: padding-left, pr: padding-right);
+
+@for $i from 1 through 4 {
+  $padding-v: nth($padding-list, $i) + px;
+
+  @each $selector, $prop in $selectors-map {
+    &-#{$selector}#{$value-prefix}#{$i} {
+      #{$prop}: $padding-v;
+    }
+  }
+  
+  &-px#{$value-prefix}#{$i} {
+    padding-left: $padding-v;
+    padding-right: $padding-v;
+  }
+
+  &-py#{$value-prefix}#{$i} {
+    padding-top: $padding-v;
+    padding-bottom: $padding-v;
+  }
+}
