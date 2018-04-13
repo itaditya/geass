@@ -25,3 +25,13 @@ $breakpoints-end: (
   'md': 992px,
   'lg': 1200px
 );
+
+:root {
+  @each $prop, $val in $theme-colors {
+    --#{$prop}: #{$val};
+  }
+
+  @each $prop, $val in $breakpoints {
+    --breakpoint-#{$prop}: #{$val};
+  }
+}

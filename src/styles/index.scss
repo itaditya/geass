@@ -6,9 +6,3 @@
 
 @import 'mixins/index';
 @import 'utilities/index';
-
-body {
-    background: theme(white);
-    display: flex;
-    color: theme();
-}
