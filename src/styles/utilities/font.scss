@@ -1,0 +1,11 @@
+// Sizing Utility Classes
+
+@for $i from 1 through 4 {
+  &-font-size#{$value-prefix}#{$i} {
+    font-size: $i + em;
+  }
+}
+
+&-font-weight#{$value-prefix}bold {
+  font-weight: bold;
+}
